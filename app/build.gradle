@@ -33,4 +33,5 @@ dependencies {
     testCompile 'junit:junit:4.12'
     compile files('libs/cloudinary-android-1.2.2.jar')
     compile files('libs/cloudinary-core-1.2.2.jar')
+
 }
