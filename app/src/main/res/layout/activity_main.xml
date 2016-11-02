@@ -24,15 +24,6 @@
         android:orientation="vertical"
         android:gravity="center">
 
-
-        <android.support.design.widget.FloatingActionButton
-            android:id="@+id/fab"
-            android:layout_width="150dp"
-            android:layout_height="150dp"
-            android:layout_gravity="center"
-            android:layout_margin="16dp"
-            app:elevation="0dp" />
-
         <ImageView
             android:layout_width="50dp"
             android:layout_height="50dp"
@@ -47,6 +38,35 @@
             android:textColor="@color/white"
             android:textSize="20dp"
             android:text=" "/>
+
+        <com.getbase.floatingactionbutton.FloatingActionsMenu
+            android:id="@+id/menu_fab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:fab_expandDirection="down"
+            app:fab_labelStyle="@style/Etiquetas"
+            app:fab_addButtonSize="normal"
+            app:fab_labelsPosition="left">
+
+            <com.getbase.floatingactionbutton.FloatingActionButton
+            android:id="@+id/accion_camara"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@android:drawable/ic_menu_camera"
+            app:fab_colorNormal="?attr/colorAccent"
+            app:fab_size="mini"
+            app:fab_title="Camara" />
+
+            <com.getbase.floatingactionbutton.FloatingActionButton
+                android:id="@+id/accion_galeria"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@android:drawable/ic_menu_gallery"
+                app:fab_colorNormal="?attr/colorAccent"
+                app:fab_size="mini"
+                app:fab_title="Galeria" />
+
+        </com.getbase.floatingactionbutton.FloatingActionsMenu>
 
     </LinearLayout>
 
