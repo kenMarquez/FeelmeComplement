@@ -13,6 +13,7 @@
         android:text="Feelme Complement"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:textStyle="bold"
         android:gravity="center"
         android:textSize="30dp"
         android:textColor="@color/white"
@@ -20,13 +21,14 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="fill_parent"
+        android:layout_height="wrap_content"
+        android:padding="20dp"
         android:orientation="vertical"
         android:gravity="center">
 
         <ImageView
-            android:layout_width="50dp"
-            android:layout_height="50dp"
+            android:layout_width="175px"
+            android:layout_height="175px"
             android:src="@mipmap/pending_animation_000"
             android:id="@+id/imageAnimation" />
 
@@ -39,23 +41,33 @@
             android:textSize="20dp"
             android:text=" "/>
 
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="right">
+
+
         <com.getbase.floatingactionbutton.FloatingActionsMenu
             android:id="@+id/menu_fab"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:fab_expandDirection="down"
+            android:layout_margin="15dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="end|bottom"
+            app:fab_expandDirection="up"
             app:fab_labelStyle="@style/Etiquetas"
             app:fab_addButtonSize="normal"
             app:fab_labelsPosition="left">
 
             <com.getbase.floatingactionbutton.FloatingActionButton
-            android:id="@+id/accion_camara"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@android:drawable/ic_menu_camera"
-            app:fab_colorNormal="?attr/colorAccent"
-            app:fab_size="mini"
-            app:fab_title="Camara" />
+                android:id="@+id/accion_camara"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@android:drawable/ic_menu_camera"
+                app:fab_colorNormal="?attr/colorAccent"
+                app:fab_size="mini"
+                app:fab_title="Camara" />
 
             <com.getbase.floatingactionbutton.FloatingActionButton
                 android:id="@+id/accion_galeria"
@@ -69,5 +81,7 @@
         </com.getbase.floatingactionbutton.FloatingActionsMenu>
 
     </LinearLayout>
+
+
 
 </LinearLayout>

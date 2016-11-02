@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    tools:context="ken.mx.feelmecomplement.MainActivity"
+    android:orientation="vertical"
+    android:baselineAligned="false">
+
+    <TextView
+        android:text="Feelme Complement"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:textSize="30dp"
+        android:textColor="@color/white"
+        android:padding="5dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_weight="1">
+
+            <ImageView
+                android:layout_width="175px"
+                android:layout_height="175px"
+                android:src="@mipmap/pending_animation_000"
+                android:id="@+id/imageAnimation" />
+
+            <TextView
+                android:id="@+id/tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:textSize="20dp"
+                android:text=" "/>
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="right">
+
+
+            <com.getbase.floatingactionbutton.FloatingActionsMenu
+                android:id="@+id/menu_fab"
+                android:layout_margin="15dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="end|bottom"
+                app:fab_expandDirection="up"
+                app:fab_labelStyle="@style/Etiquetas"
+                app:fab_addButtonSize="normal"
+                app:fab_labelsPosition="left">
+
+                <com.getbase.floatingactionbutton.FloatingActionButton
+                    android:id="@+id/accion_camara"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@android:drawable/ic_menu_camera"
+                    app:fab_colorNormal="?attr/colorAccent"
+                    app:fab_size="mini"
+                    app:fab_title="Camara" />
+
+                <com.getbase.floatingactionbutton.FloatingActionButton
+                    android:id="@+id/accion_galeria"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@android:drawable/ic_menu_gallery"
+                    app:fab_colorNormal="?attr/colorAccent"
+                    app:fab_size="mini"
+                    app:fab_title="Galeria" />
+
+            </com.getbase.floatingactionbutton.FloatingActionsMenu>
+
+        </LinearLayout>
+
+    </LinearLayout>
+</LinearLayout>

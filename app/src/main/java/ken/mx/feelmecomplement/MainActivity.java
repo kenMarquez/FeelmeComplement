@@ -53,12 +53,14 @@ public class MainActivity extends AppCompatActivity implements MultiStateAnimati
         mAnimation.setSeriesAnimationFinishedListener(this);
         mAnimation.transitionNow("pending");
 
+        final FloatingActionsMenu fab_menu = (FloatingActionsMenu) findViewById(R.id.menu_fab);
 
         FloatingActionButton fab_camara = (FloatingActionButton) findViewById(R.id.accion_camara);
         fab_camara.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 startCamera();
+                fab_menu.collapse();
             }
         });
 
@@ -67,6 +69,7 @@ public class MainActivity extends AppCompatActivity implements MultiStateAnimati
             @Override
             public void onClick(View view) {
                 startGalleryChooser();
+                fab_menu.collapse();
             }
         });
     }
@@ -139,7 +142,7 @@ public class MainActivity extends AppCompatActivity implements MultiStateAnimati
                     @Override
                     public void onResponse(Call<ResponseBody> call, Response<ResponseBody> response) {
                         tv.setText("notify");
-                        mAnimation.queueTransition("pending");
+                        mAnimation.queueTransition("finished");
                     }
 
                     @Override
@@ -154,6 +157,7 @@ public class MainActivity extends AppCompatActivity implements MultiStateAnimati
 
             @Override
             public void onCloudinaryUploadError() {
+                tv.setText(" ");
                 Toast.makeText(MainActivity.this, "Lo sentimos hubo un error al subir tu imagen", Toast.LENGTH_SHORT).show();
                 mAnimation.queueTransition("pending");
             }
